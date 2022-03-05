@@ -96,7 +96,6 @@ pywinpty==0.5.7
 pyzmq==22.0.3
 qt5-applications==5.15.2.2.1
 qt5-tools==5.15.2.1.0.1
-reportlab==3.5.60
 requests==2.25.1
 scikit-image==0.18.1
 scipy==1.6.1
