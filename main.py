@@ -5,14 +5,6 @@ import math
 
 app = Flask(__name__)
 
-@app.errorhandler(404)
-def not_found(error):
-    return "Not found"
-
-@app.route('/', methods=['GET'])
-def index():
-    return "INICIO CORRECTO"
-
 @app.route("/aproxsen/<string:x>")
 def get_datos_aprox(x):
     x = float(x)
