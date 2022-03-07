@@ -6,7 +6,7 @@ import math
 app = Flask(__name__)
 
 @app.route("/sumasen/<string:a>/<string:b>")
-def get_suma_sen(a):
+def get_suma_sen(a, b):
     a = float(a)
     b = float(b)
     
