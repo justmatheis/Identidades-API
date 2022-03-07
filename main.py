@@ -56,5 +56,16 @@ def get_razones(a):
 
     return jsonify({"sen": sen, "tan": tan, "cot": cot, "sec": sec, "csc": csc})
 
+@app.route("/razonangulo/<string:a>/<string:B>")
+def get_razones(a, B):
+    a = float(a)
+    B = float(B)
+    
+    C = 180 - 90 - B
+    b = a * math.sin(B)
+    c = a * math.cos(B)
+    
+    return jsonify({"b": b, "c": c, "C": C})
+
 if __name__ == '__main__':
     app.run(debug = True, port=4000)
