@@ -43,5 +43,18 @@ def get_formula_heron(a, b, c):
 
     return jsonify({"area": area})
 
+@app.route("/razoncos/<string:a>")
+def get_razones(a):
+    a = int(a)
+
+    senC = 1 - math.pow(a, 2)
+    sen = - math.sqrt(senC)
+    tan = sen / a
+    cot = 1 / tan
+    sec = 1 / a
+    csc = 1 / sen
+
+    return jsonify({"sen": sen, "tan": tan})
+
 if __name__ == '__main__':
     app.run(debug = True, port=4000)
