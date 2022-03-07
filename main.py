@@ -54,7 +54,7 @@ def get_razones(a):
     sec = 1 / a
     csc = 1 / sen
 
-    return jsonify({"sen": sen, "tan": tan})
+    return jsonify({"sen": sen, "tan": tan, "cot": cot, "sec": sec, "csc": csc})
 
 if __name__ == '__main__':
     app.run(debug = True, port=4000)
