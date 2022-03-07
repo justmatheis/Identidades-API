@@ -18,7 +18,6 @@ def get_suma_sen(a, b):
 def get_suma_series(x, n):
     x = int(x)
     n = int(n)
-    result = 0
     sine = 0
 
     for i in range(n):
@@ -26,10 +25,8 @@ def get_suma_series(x, n):
         pi = 22/7
         y = x*(pi/180)
         sine += ((y**(2.0*i+1))/math.factorial(2*i+1))*sign
-    
-    result = round(sine,2)
 
-    return jsonify({"sumas": result})
+    return jsonify({"sumas": sine})
 
 @app.route("/heron/<string:a>/<string:b>/<string:c>")
 def get_formula_heron(a, b, c):
