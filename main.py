@@ -76,7 +76,7 @@ def get_triangulo_obl(a, b, c):
     
     ang_a = math.degrees(math.acos((math.pow(a,2) - math.pow(b,2) - math.pow(c,2))/(-2 * b * c)))
     ang_b = math.degrees(math.acos((math.pow(b,2) - math.pow(a,2) - math.pow(c,2))/(-2 * a * c)))
-    ang_t = math.degrees(math.acos((math.pow(a,2) - math.pow(c,2) - math.pow(b,2))/(-2 * a * b)))
+    ang_t = math.degrees(math.acos((math.pow(c,2) - math.pow(a,2) - math.pow(b,2))/(-2 * a * b)))
     
     return jsonify({"alpha": ang_a, "beta": ang_b, "theta": ang_t})
 
