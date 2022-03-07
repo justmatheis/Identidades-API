@@ -45,7 +45,7 @@ def get_formula_heron(a, b, c):
 
 @app.route("/razoncos/<string:a>")
 def get_razones(a):
-    a = int(a)
+    a = float(a)
 
     senC = 1 - math.pow(a, 2)
     sen = - math.sqrt(senC)
