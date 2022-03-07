@@ -5,15 +5,12 @@ import math
 
 app = Flask(__name__)
 
-@app.route("/aproxsen/<string:x>")
-def get_datos_aprox(x):
-    x = float(x)
-    multiplier = 1
-    result = 0
+@app.route("/sumasen/<string:a>/<string:b>")
+def get_suma_sen(a):
+    a = float(a)
+    b = float(b)
     
-    for i in range(1,20,2):
-        result += multiplier*pow(x,i)/math.factorial(i)
-        multiplier *= -1
+    result = (2 * math.sin((a + b)/2)) * (math.cos((a - b)/2))
     
     return jsonify({"seno": result})
 
