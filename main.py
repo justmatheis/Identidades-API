@@ -62,8 +62,8 @@ def get_resolucion(a, B):
     B = float(B)
     
     C = 180 - 90 - B
-    b = a * math.sin(B)
-    c = a * math.cos(B)
+    b = a * -math.sin(B)
+    c = a * -math.cos(B)
     
     return jsonify({"b": b, "c": c, "C": C})
 
