@@ -57,7 +57,7 @@ def get_razones(a):
     return jsonify({"sen": sen, "tan": tan, "cot": cot, "sec": sec, "csc": csc})
 
 @app.route("/triangulorect/<string:a>/<string:b>")
-def get_triangulo_rect(a, b, c):
+def get_triangulo_rect(a, b):
     a = float(a)
     b = float(b)
     ang_a = 90.0
