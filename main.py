@@ -56,7 +56,7 @@ def get_razones(a):
 
     return jsonify({"sen": sen, "tan": tan, "cot": cot, "sec": sec, "csc": csc})
 
-@app.route("/razonangulo/<string:a>/<string:B>")
+@app.route("/resolucion/<string:a>/<string:B>")
 def get_razones(a, B):
     a = float(a)
     B = float(B)
